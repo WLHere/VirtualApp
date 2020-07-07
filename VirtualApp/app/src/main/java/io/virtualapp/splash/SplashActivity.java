@@ -29,13 +29,13 @@ public class SplashActivity extends VActivity {
                 FlurryROMCollector.startCollect();
                 Once.markDone("collect_flurry");
             }
-            long time = System.currentTimeMillis();
+//            long time = System.currentTimeMillis();
             doActionInThread();
-            time = System.currentTimeMillis() - time;
-            long delta = 3000L - time;
-            if (delta > 0) {
-                VUiKit.sleep(delta);
-            }
+//            time = System.currentTimeMillis() - time;
+//            long delta = 3000L - time;
+//            if (delta > 0) {
+//                VUiKit.sleep(delta);
+//            }
         }).done((res) -> {
             HomeActivity.goHome(this);
             finish();
